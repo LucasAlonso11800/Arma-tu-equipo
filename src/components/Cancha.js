@@ -1,22 +1,284 @@
-import React from 'react';
-// import signo from '../assets/Signo.png';
+import React, { useState } from 'react';
+import signo from '../assets/Signo.png';
 
 function Cancha() {
+    const titulares = []
+
+    const formacionUno = [
+        {
+            top: '16.25%',
+            left: '25%'
+        },
+        {
+            top: '33.25%',
+            left: '20%'
+        },
+        {
+            top: '58.75%',
+            left: '20%'
+        },
+        {
+            top: '75.75%',
+            left: '25%'
+        },
+        {
+            top: '20.5%',
+            left: '50%'
+        },
+        {
+            top: '33.25%',
+            left: '40%'
+        },
+        {
+            top: '58.75%',
+            left: '40%'
+        },
+        {
+            top: '71.5%',
+            left: '50%'
+        },
+        {
+            top: '33.25%',
+            left: '75%'
+        },
+        {
+            top: '58.75%',
+            left: '70%'
+        },
+    ];
+
+    const formacionDos = [
+        {
+            top: '16.25%',
+            left: '25%'
+        },
+        {
+            top: '33.25%',
+            left: '20%'
+        },
+        {
+            top: '58.75%',
+            left: '20%'
+        },
+        {
+            top: '75.75%',
+            left: '25%'
+        },
+        {
+            top: '24.75%',
+            left: '50%'
+        },
+        {
+            top: '46%',
+            left: '40%'
+        },
+        {
+            top: '67.25%',
+            left: '50%'
+        },
+        {
+            top: '46%',
+            left: '60%'
+        },
+        {
+            top: '33.25%',
+            left: '75%'
+        },
+        {
+            top: '58.75%',
+            left: '75%'
+        },
+    ];
+
+    const formacionTres = [
+        {
+            top: '16.25%',
+            left: '25%'
+        },
+        {
+            top: '33.25%',
+            left: '20%'
+        },
+        {
+            top: '58.75%',
+            left: '20%'
+        },
+        {
+            top: '75.75%',
+            left: '25%'
+        },
+        {
+            top: '33.25%',
+            left: '40%'
+        },
+        {
+            top: '58.75%',
+            left: '40%'
+        },
+        {
+            top: '20.5%',
+            left: '60%'
+        },
+        {
+            top: '46%',
+            left: '60%'
+        },
+        {
+            top: '71.5%',
+            left: '60%'
+        },
+        {
+            top: '46%',
+            left: '75%'
+        },
+    ];
+
+    const formacionCuatro = [
+        {
+            top: '16.25%',
+            left: '25%'
+        },
+        {
+            top: '33.25%',
+            left: '20%'
+        },
+        {
+            top: '58.75%',
+            left: '20%'
+        },
+        {
+            top: '75.75%',
+            left: '25%'
+        },
+        {
+            top: '24.75%',
+            left: '50%'
+        },
+        {
+            top: '46%',
+            left: '40%'
+        },
+        {
+            top: '67.25%',
+            left: '50%'
+        },
+        {
+            top: '16.25%',
+            left: '70%'
+        },
+        {
+            top: '46%',
+            left: '75%'
+        },
+        {
+            top: '75.75%',
+            left: '70%'
+        },
+    ];
+
+    const formacionCinco = [
+        {
+            top: '20.5%',
+            left: '25%'
+        },
+        {
+            top: '46%',
+            left: '20%'
+        },
+        {
+            top: '71.5%',
+            left: '25%'
+        },
+        {
+            top: '16.25%',
+            left: '50%'
+        },
+        {
+            top: '33.25%',
+            left: '40%'
+        },
+        {
+            top: '58.75%',
+            left: '40%'
+        },
+        {
+            top: '75.75%',
+            left: '50%'
+        },
+        {
+            top: '20.5%',
+            left: '70%'
+        },
+        {
+            top: '46%',
+            left: '75%'
+        },
+        {
+            top: '71.5%',
+            left: '70%'
+        },
+    ];
+
+    const formacionSeis = [
+        {
+            top: '20.5%',
+            left: '25%'
+        },
+        {
+            top: '46%',
+            left: '20%'
+        },
+        {
+            top: '71.5%',
+            left: '25%'
+        },
+        {
+            top: '16.25%',
+            left: '55%'
+        },
+        {
+            top: '29%',
+            left: '45%'
+        },
+        {
+            top: '46%',
+            left: '40%'
+        },
+        {
+            top: '63%',
+            left: '45%'
+        },
+        {
+            top: '75.75%',
+            left: '55%'
+        },
+        {
+            top: '33.25%',
+            left: '75%'
+        },
+        {
+            top: '58.75%',
+            left: '75%'
+        },
+    ];
+
+    const [formacion, setFormacion] = useState(formacionUno);
+
     return (
         <div className="cancha">
             <div className="formaciones">
                 <h3>Elegi tu formacion</h3>
                 <ul className="lista-formaciones">
-                    <li className="formacion seleccionada">4-4-2</li>
-                    <li className="formacion">4-3-1-2</li>
-                    <li className="formacion">4-2-3-1</li>
-                    <li className="formacion">4-3-3</li>
-                    <li className="formacion">3-4-3</li>
-                    <li className="formacion">3-5-2</li>
+                    <li className={formacionUno === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionUno)}>4-4-2</li>
+                    <li className={formacionDos === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionDos)}>4-3-1-2</li>
+                    <li className={formacionTres === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionTres)}>4-2-3-1</li>
+                    <li className={formacionCuatro === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionCuatro)}>4-3-3</li>
+                    <li className={formacionCinco === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionCinco)}>3-4-3</li>
+                    <li className={formacionSeis === formacion ? 'formacion seleccionada' : 'formacion'} onClick={() => setFormacion(formacionSeis)}>3-5-2</li>
                 </ul>
             </div>
             <div className="img-cancha">
-                {/* <div className="titular" style={{ top: '46%', left: '5%' }}>
+                <div className="titular" style={{ top: '46%', left: '5%' }}>
                     <img src={titulares[0] ? titulares[0].imagen : signo} alt={titulares[0] ? titulares[0].nombre : 'Jugador 1'} className="img-titular" />
                     <p className="nombre-titular">{titulares[0] ? titulares[0].nombre : 'Jugador 1'}</p>
                 </div>
@@ -59,10 +321,11 @@ function Cancha() {
                 <div className="titular" style={{ top: formacion[9].top, left: formacion[9].left }}>
                     <img src={titulares[10] ? titulares[10].imagen : signo} alt={titulares[10] ? titulares[10].nombre : 'Jugador 1'} className="img-titular" />
                     <p className="nombre-titular">{titulares[10] ? titulares[10].nombre : 'Jugador 11'}</p>
-                </div> */}
+                </div>
             </div>
         </div>
     )
+    
 };
 
 export default Cancha;
