@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'oswald';
+    color: #ffffff;
+    text-shadow: 0px 5px 10px #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.background{
+    background-image: url(./assets/Pasto.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar{
+    padding: 0.5em 1em 2em 1em;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.lista{
+    list-style: none;
+    margin-left: 1em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.item-lista{
+    margin-left: 1em;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.titulo{
+    margin: 0em 0.5em 1em 0.5em;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.titulo-lista-jugadores{
+    padding: 0.5em 1em;
+}
+.container-jugadores{
+    width: 25%;
+    overflow-y: scroll;
+}
+.jugador{
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+}
+.jugador:hover{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+.img-jugador{
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    border: 4px solid #000000;
+    cursor: pointer;
+}
+
+.nombre-jugador{
+    text-align: center;
+    margin-left: 1em;
+    font-size: 1.5rem;
+}
+
+/* CANCHA */
+
+
+.cancha{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formaciones{
+    display: flex;
+    width: 100%;
+    padding: 0.5em;
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+.lista-formaciones{
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 1em;
+}
+.formacion{
+    font-size: 1.25rem;
+    padding: 0 1em;
+    cursor: pointer;
+}
+
+.seleccionada{
+    font-weight: bold;
+    font-size: 1.375rem;
+}
+.img-cancha{
+    width: 51em;
+    height: 34em;
+    position: relative;
+    background-image: url(./assets/Cancha.jpg);
+    background-size: cover;
+    border: 2px solid #000000;
+}
+
+.titular{
+    position: absolute;
+    z-index: 10;
+}
+
+.img-titular{
+    height: 3em;
+    width: 3em;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 3px #000000;
+}
+
+.nombre-titular{
+    text-align: center;
+}
