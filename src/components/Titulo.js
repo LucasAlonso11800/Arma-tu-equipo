@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
 function Titulo() {
+    const { equipo } = useContext(GlobalContext)
     return (
-        <h1 className="titulo">Como deberia formar la seleccion para el proximo partido?</h1>
+        <h1 className="titulo">Como deberia formar {equipo} para el proximo partido?</h1>
     )
 };
 

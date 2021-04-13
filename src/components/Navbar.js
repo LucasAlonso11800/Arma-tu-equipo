@@ -3,11 +3,14 @@ import { GlobalContext } from '../context/GlobalState';
 import { jugadoresSeleccion, jugadoresRiver, jugadoresBoca } from './Jugadores';
 
 function Navbar() {
-    const {setJugadores, setTitulares} = useContext(GlobalContext);
+    const {setJugadores, setTitulares, setEquipo} = useContext(GlobalContext);
 
     function cambiarEquipo(equipo) {
         setJugadores(equipo);
-        setTitulares([])
+        setTitulares([]);
+        if(equipo === jugadoresSeleccion) return setEquipo('la seleccion');
+        if(equipo === jugadoresRiver) return setEquipo('River');
+        if(equipo === jugadoresBoca) return setEquipo('Boca');
     };
 
     return (
