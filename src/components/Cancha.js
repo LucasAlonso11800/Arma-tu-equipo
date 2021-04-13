@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import signo from '../assets/Signo.png';
 import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis } from './Formaciones';
 
+import { GlobalContext } from '../context/GlobalState';
+
 function Cancha() {
-    const titulares = []
+    const { jugadores, titulares } = useContext(GlobalContext);
     const [formacion, setFormacion] = useState(formacionUno);
 
     return (
@@ -21,7 +23,9 @@ function Cancha() {
             </div>
             <div className="img-cancha">
                 <div className="titular" style={{ top: '46%', left: '5%' }}>
-                    <img src={titulares[0] ? titulares[0].imagen : signo} alt={titulares[0] ? titulares[0].nombre : 'Jugador 1'} className="img-titular" />
+                    <img src={titulares[0] ? titulares[0].imagen : signo} alt={titulares[0] ? titulares[0].nombre : 'Jugador 1'}
+                        className="img-titular"
+                    />
                     <p className="nombre-titular">{titulares[0] ? titulares[0].nombre : 'Jugador 1'}</p>
                 </div>
                 <div className="titular" style={{ top: formacion[0].top, left: formacion[0].left }}>

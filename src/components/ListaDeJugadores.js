@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Jugador from './Jugador';
 
 import { GlobalContext } from '../context/GlobalState';
 
 function ListaDeJugadores() {
-    const [jugadores, setJugadores] = useContext(GlobalContext);
+    const { jugadores, setJugadores } = useContext(GlobalContext);
 
     return (
         <div className="container-jugadores">
