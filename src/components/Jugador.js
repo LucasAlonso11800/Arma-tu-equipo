@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 function Jugador({ jugador }) {
-    const { titulares, setTitulares } = useContext(GlobalContext);
+    const { titulares, setTitulares, equipo } = useContext(GlobalContext);
     const rellenos = titulares.filter(jugador => jugador.id === '');
 
     function agregarTitular(jugador) {
@@ -36,7 +36,11 @@ function Jugador({ jugador }) {
     };
 
     return (
-        <div className={jugador.seleccionado ? 'seleccionado' : 'jugador'}
+        <div className={
+            jugador.seleccionado && equipo === 'la seleccion' ? 'seleccionado seleccionado-seleccion' : 
+            jugador.seleccionado && equipo === 'River' ? 'seleccionado seleccionado-river' :
+            jugador.seleccionado && equipo === 'Boca' ? 'seleccionado seleccionado-boca' :
+            'jugador'}
             onClick={jugador.seleccionado ? () => {} : () => agregarTitular(jugador) }
         >
             <img src={jugador.imagen}

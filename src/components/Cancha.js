@@ -35,7 +35,7 @@ function Cancha() {
     return (
         <div className="cancha">
             <div className="formaciones">
-                <h3>Elegi tu formacion</h3>
+                <h2>Elegi tu formacion</h2>
                 <ul className="lista-formaciones">
                     <li className='formacion' onClick={() => setFormacion(formacionUno)}>4-4-2</li>
                     <li className='formacion' onClick={() => setFormacion(formacionDos)}>4-3-1-2</li>

@@ -4,10 +4,12 @@ import { jugadoresSeleccion, jugadoresRiver, jugadoresBoca } from './Jugadores';
 
 function Navbar() {
     const {setJugadores, setTitulares, setEquipo} = useContext(GlobalContext);
-
+    const todosLosJugadores = [...jugadoresSeleccion, ...jugadoresRiver, ...jugadoresBoca];
+    
     function cambiarEquipo(equipo) {
         setJugadores(equipo);
         setTitulares([]);
+        todosLosJugadores.forEach(jugador => jugador.seleccionado = false)
         if(equipo === jugadoresSeleccion) return setEquipo('la seleccion');
         if(equipo === jugadoresRiver) return setEquipo('River');
         if(equipo === jugadoresBoca) return setEquipo('Boca');

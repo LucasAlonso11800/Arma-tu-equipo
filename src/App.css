@@ -44,15 +44,25 @@ body{
 
 .container{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 2em;
+}
+
+/* SELECCION DE JUGADORES */
+
+.container-jugadores{
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
 }
 .titulo-lista-jugadores{
-    padding: 0.5em 1em;
+    padding: 0 1em;
 }
-.container-jugadores{
-    width: 25%;
-    overflow-y: scroll;
+.lista-jugadores{
+    display: flex;
+    margin-top: 1em;
 }
 .jugador{
     display: flex;
@@ -80,15 +90,22 @@ body{
     display: flex;
     align-items: center;
     padding: 0.5em 1em;
-    background-color: rgba(255, 255, 255, 0.6);
 }
-
+.seleccionado-seleccion .img-jugador {
+    border: 4px solid #0099ff;
+}
+.seleccionado-river .img-jugador {
+    border: 4px solid #ff0000;
+}
+.seleccionado-boca .img-jugador {
+    border: 4px solid #0000ff;
+}
 
 /* CANCHA */
 
 
 .cancha{
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,9 +113,9 @@ body{
 
 .formaciones{
     display: flex;
+    justify-content: center;
     width: 100%;
     padding: 0.5em;
-    margin-left: 5em;
     margin-bottom: 1em;
 }
 
@@ -109,14 +126,14 @@ body{
     margin-left: 1em;
 }
 .formacion{
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     padding: 0 1em;
     cursor: pointer;
 }
 
 .img-cancha{
-    width: 51em;
-    height: 34em;
+    width: 60em;
+    height: 40em;
     position: relative;
     background-image: url(./assets/Cancha.jpg);
     background-size: cover;
@@ -129,8 +146,8 @@ body{
 }
 
 .img-titular{
-    height: 3.5em;
-    width: 3.5em;
+    height: 5em;
+    width: 5em;
     border-radius: 100%;
     box-shadow: 0 0 10px 3px #000000;
     cursor: pointer;

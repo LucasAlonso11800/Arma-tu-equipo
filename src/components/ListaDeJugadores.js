@@ -8,9 +8,7 @@ function ListaDeJugadores() {
 
     return (
         <div className="container-jugadores">
-            <div className="titulo-lista-jugadores">
-                <h3>Selecciona un jugador para que ingrese al equipo</h3>
-            </div>
+            <h2 className="titulo-lista-jugadores">Selecciona un jugador para que ingrese al equipo</h2>
             <div className="lista-jugadores">
                 {jugadores.map(jugador => {
                     return <Jugador jugador={jugador} key={jugador.id} />
