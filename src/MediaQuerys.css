@@ -1,0 +1,162 @@
+@media all and (max-width: 600px){
+    .background{
+        min-height: 200vh;
+        padding-bottom: 0;
+    }
+}
+
+@media all and (max-width: 325px){
+    .background{
+        padding-bottom: 12em;
+    }
+}
+
+@media all and (max-width: 520px){
+    .navbar{
+        flex-direction: column;
+    }
+    .titulo-navbar{
+        text-align: center;
+    }
+    .lista{
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .item-lista{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .lista-formaciones{
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 800px){
+    .img-jugador{
+        width: 4em;
+        height: 4em;
+    }
+}
+@media all and (max-width: 600px){
+    .img-jugador{
+        width: 3em;
+        height: 3em;
+    }
+    .nombre-jugador{
+        font-size: 1.125rem;
+    }
+}
+
+@media all and (max-width: 400px){
+    .jugador{
+        flex-direction: column;
+    }
+    .seleccionado{
+        flex-direction: column;
+    }
+    .img-jugador{
+        width: 4em;
+        height: 4em;
+    }
+    .nombre-jugador{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .img-cancha{
+        width: 54em;
+        height: 36em;
+    }
+    .img-titular{
+        width: 4.5em;
+        height: 4.5em;
+    }
+}
+@media all and (max-width: 900px){
+    .img-cancha{
+        width: 48em;
+        height: 32em;
+    }
+    .img-titular{
+        width: 4em;
+        height: 4em;
+    }
+}
+@media all and (max-width: 800px){
+    .formacion{
+        font-size: 1.25rem;
+    }
+    .img-cancha{
+        width: 42em;
+        height: 28em;
+    }
+    .img-titular{
+        width: 3.5em;
+        height: 3.5em;
+    }
+}
+@media all and (max-width: 700px){
+    .img-cancha{
+        width: 36em;
+        height: 24em;
+    }
+    .img-titular{
+        width: 3em;
+        height: 3em;
+    }
+}
+@media all and (max-width: 600px){
+    .formacion{
+        font-size: 1.125rem;
+    }
+    .img-cancha{
+        width: 42em;
+        height: 28em;
+        transform: rotate(90deg) translateX(8em);
+    }
+    .titular{
+        display: flex;
+        transform: translateY(-15%);
+    }
+    .img-titular{
+        width: 3.5em;
+        height: 3.5em;
+        margin-right: 0.5em;
+        transform: rotate(-90deg);
+    }
+    .nombre-titular{
+        font-size: 0.875rem;
+        transform: rotate(-90deg);
+    }
+}
+@media all and (max-width: 500px){
+    .img-cancha{
+        width: 33em;
+        height: 22em;
+    }
+    .img-titular{
+        width: 3em;
+        height: 3em;
+    }
+}
+@media all and (max-width: 430px){
+    .img-cancha{
+        transform: rotate(90deg) translateX(5em)
+    }
+}
+@media all and (max-width: 400px){
+    .img-cancha{
+        width: 27em;
+        height: 18em;
+    }
+    .img-titular{
+        width: 2.5em;
+        height: 2.5em;
+    }
+}

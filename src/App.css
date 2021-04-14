@@ -10,12 +10,17 @@
 }
 body{
     overflow-x: hidden;
+    min-width: 300px;
 }
 .background{
     background-image: url(./assets/Pasto.jpg);
     background-size: cover;
     background-attachment: fixed;
+    padding-bottom: 2em;
 }
+
+
+/* NAVBAR */
 
 .navbar{
     padding: 0.5em 1em 2em 1em;
@@ -38,6 +43,8 @@ body{
     cursor: pointer;
 }
 
+/* TITULO Y CONTAINER */
+
 .titulo{
     margin: 0em 0.5em 1em 0.5em;
 }
@@ -46,8 +53,6 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
-    padding-bottom: 2em;
 }
 
 /* SELECCION DE JUGADORES */
@@ -55,7 +60,6 @@ body{
 .container-jugadores{
     width: 100%;
     height: auto;
-    overflow-x: scroll;
 }
 .titulo-lista-jugadores{
     padding: 0 1em;
@@ -63,6 +67,7 @@ body{
 .lista-jugadores{
     display: flex;
     margin-top: 1em;
+    overflow-x: scroll;
 }
 .jugador{
     display: flex;
@@ -114,6 +119,7 @@ body{
 .formaciones{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     padding: 0.5em;
     margin-bottom: 1em;
@@ -122,13 +128,17 @@ body{
 .lista-formaciones{
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     margin-left: 1em;
 }
+
 .formacion{
     font-size: 1.375rem;
     padding: 0 1em;
     cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .img-cancha{
@@ -139,6 +149,7 @@ body{
     background-size: cover;
     border: 2px solid #000000;
 }
+
 
 .titular{
     position: absolute;

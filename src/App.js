@@ -1,4 +1,5 @@
 import './App.css';
+import './MediaQuerys.css'
 
 import Navbar from './components/Navbar';
 import Titulo from './components/Titulo';

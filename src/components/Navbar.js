@@ -16,14 +16,14 @@ function Navbar() {
     };
 
     return (
-        <div className="navbar">
-            <h2>Arma tu equipo</h2>
+        <header className="navbar">
+            <h2 className="titulo-navbar">Arma tu equipo</h2>
             <ul className="lista">
                 <li className="item-lista" onClick={() => cambiarEquipo(jugadoresSeleccion)}>Seleccion Argentina</li>
                 <li className="item-lista" onClick={() => cambiarEquipo(jugadoresRiver)}>River</li>
                 <li className="item-lista" onClick={() => cambiarEquipo(jugadoresBoca)}>Boca</li>
             </ul>
-        </div>
+        </header>
     )
 }
 

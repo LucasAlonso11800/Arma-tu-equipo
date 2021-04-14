@@ -4,10 +4,10 @@ import Cancha from './Cancha';
 
 function ArmarEquipo() {
     return (
-        <div className="container">
+        <main className="container">
             <ListaDeJugadores />
             <Cancha />
-        </div>
+        </main>
     )
 };
 
