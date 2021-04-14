@@ -228,8 +228,8 @@ export const formacionSeis = [
         left: '25%'
     },
     {
-        top: '16.25%',
-        left: '55%'
+        top: '12%',
+        left: '50%'
     },
     {
         top: '29%',
@@ -244,8 +244,8 @@ export const formacionSeis = [
         left: '45%'
     },
     {
-        top: '75.75%',
-        left: '55%'
+        top: '80%',
+        left: '50%'
     },
     {
         top: '33.25%',
@@ -254,5 +254,91 @@ export const formacionSeis = [
     {
         top: '58.75%',
         left: '75%'
+    },
+];
+
+export const formacionSiete = [
+    {
+        top: '20.5%',
+        left: '25%'
+    },
+    {
+        top: '46%',
+        left: '20%'
+    },
+    {
+        top: '71.5%',
+        left: '25%'
+    },
+    {
+        top: '24.75%',
+        left: '50%'
+    },
+    {
+        top: '46%',
+        left: '40%'
+    },
+    {
+        top: '67.25%',
+        left: '50%'
+    },
+    {
+        top: '46%',
+        left: '65%'
+    },
+    {
+        top: '12%',
+        left: '75%'
+    },
+    {
+        top: '46%',
+        left: '80%'
+    },
+    {
+        top: '80%',
+        left: '75%'
+    },
+];
+
+export const formacionOcho = [
+    {
+        top: '12%',
+        left: '30%'
+    },
+    {
+        top: '29%',
+        left: '25%'
+    },
+    {
+        top: '46%',
+        left: '20%'
+    },
+    {
+        top: '63%',
+        left: '25%'
+    },
+    {
+        top: '80%',
+        left: '30%'
+    },
+    {
+        top: '16.25%',
+        left: '55%'
+    },
+    {
+        top: '33.25%',
+        left: '45%'
+    },
+    {
+        top: '58.75%',
+        left: '45%'
+    },
+    {
+        top: '75.75%',
+        left: '55%'
+    },
+    {
+        top: '46%',
+        left: '70%'
     },
 ];

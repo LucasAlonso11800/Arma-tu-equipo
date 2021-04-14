@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import signo from '../assets/Signo.png';
-import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis } from './Formaciones';
+import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis, formacionSiete, formacionOcho } from './Formaciones';
 
 import { GlobalContext } from '../context/GlobalState';
 
@@ -19,6 +19,8 @@ function Cancha() {
                     <li className='formacion' onClick={() => setFormacion(formacionCuatro)}>4-3-3</li>
                     <li className='formacion' onClick={() => setFormacion(formacionCinco)}>3-4-3</li>
                     <li className='formacion' onClick={() => setFormacion(formacionSeis)}>3-5-2</li>
+                    <li className='formacion' onClick={() => setFormacion(formacionSiete)}>3-3-1-3</li>
+                    <li className='formacion' onClick={() => setFormacion(formacionOcho)}>5-4-1</li>
                 </ul>
             </div>
             <div className="img-cancha">
