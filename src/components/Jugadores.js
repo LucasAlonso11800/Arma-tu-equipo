@@ -1,4 +1,13 @@
 //IMPORTAR CARAS
+import Correa from '../assets/caras/seleccion/Correa.jpg'
+import Dominguez from '../assets/caras/seleccion/Dominguez.jpg'
+import Gomez from '../assets/caras/seleccion/Gomez.jpg'
+import Lautaro from '../assets/caras/seleccion/Lautaro.jpg'
+import Emiliano from '../assets/caras/seleccion/Martinez.jpg'
+import Ocampos from '../assets/caras/seleccion/Ocampos.jpg'
+import Palacios from '../assets/caras/seleccion/Palacios.jpg'
+import Quarta from '../assets/caras/seleccion/Quarta.jpg'
+
 import Alvarez from '../assets/caras/river/Alvarez.jpg';
 import Angileri from '../assets/caras/river/Angileri.jpg';
 import Bologna from '../assets/caras/river/Bologna.jpg';
@@ -45,8 +54,8 @@ export const jugadoresSeleccion = [
         id: 2
     },
     {
-        nombre: 'Musso',
-        imagen: 'https://images.ole.com.ar/collections/avatares/121537.jpg',
+        nombre: 'E. Martinez',
+        imagen: Emiliano,
         id: 3
     },
     {
@@ -65,8 +74,8 @@ export const jugadoresSeleccion = [
         id: 6
     },
     {
-        nombre: 'Casco',
-        imagen: 'https://images.ole.com.ar/collections/avatares/62970.jpg',
+        nombre: 'M. Quarta',
+        imagen: Quarta,
         id: 7
     },
     {
@@ -95,49 +104,69 @@ export const jugadoresSeleccion = [
         id: 12
     },
     {
-        nombre: 'Pizarro',
-        imagen: 'https://images.ole.com.ar/collections/avatares/86261.jpg',
+        nombre: 'Dominguez',
+        imagen: Dominguez,
         id: 13
+    },
+    {
+        nombre: 'Palacios',
+        imagen: Palacios,
+        id: 14
     },
     {
         nombre: 'Pereyra',
         imagen: 'https://images.ole.com.ar/collections/avatares/61566.jpg',
-        id: 14
+        id: 15
     },
     {
         nombre: 'De Paul',
         imagen: 'https://images.ole.com.ar/collections/avatares/119141.jpg',
-        id: 15
+        id: 16
     },
     {
         nombre: 'Lo Celso',
         imagen: 'https://images.ole.com.ar/collections/avatares/200826.jpg',
-        id: 16
+        id: 17
+    },
+    {
+        nombre: 'J. Correa',
+        imagen: Correa,
+        id: 18
+    },
+    {
+        nombre: 'Papu Gomez',
+        imagen: Gomez,
+        id: 19
     },
     {
         nombre: 'Di Maria',
         imagen: 'https://images.ole.com.ar/collections/avatares/46497.jpg',
-        id: 17
+        id: 20
     },
     {
         nombre: 'Messi',
         imagen: 'https://images.ole.com.ar/collections/avatares/19054.jpg',
-        id: 18
+        id: 21
     },
     {
         nombre: 'Agüero',
         imagen: 'https://images.ole.com.ar/collections/avatares/37572.jpg',
-        id: 19
+        id: 22
+    },
+    {
+        nombre: 'Lautaro',
+        imagen: Lautaro,
+        id: 23
     },
     {
         nombre: 'Dybala',
         imagen: 'https://images.ole.com.ar/collections/avatares/120638.jpg',
-        id: 20
+        id: 24
     },
     {
-        nombre: 'Suarez',
-        imagen: 'https://images.ole.com.ar/collections/avatares/51781.jpg',
-        id: 21
+        nombre: 'Ocampos',
+        imagen: Ocampos,
+        id: 25
     },
 ];
 
