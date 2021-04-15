@@ -1,0 +1,1 @@
+Aplicacion React con la que podes jugar a ser DT de la seleccion, River o Boca. Arma tu formacion, elegi tus jugadores y descargala para compartirla.
