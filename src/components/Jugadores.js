@@ -1,12 +1,29 @@
 //IMPORTAR CARAS
+import Aguero from '../assets/caras/seleccion/Aguero.jpg'
+import Andrada from '../assets/caras/seleccion/Andrada.jpg'
+import Armani from '../assets/caras/seleccion/Armani.jpg'
 import Correa from '../assets/caras/seleccion/Correa.jpg'
+import DePaul from '../assets/caras/seleccion/DePaul.jpg'
+import DiMaria from '../assets/caras/seleccion/DiMaria.jpg'
 import Dominguez from '../assets/caras/seleccion/Dominguez.jpg'
+import Dybala from '../assets/caras/seleccion/Dybala.jpg'
+import Foyth from '../assets/caras/seleccion/Foyth.jpg'
 import Gomez from '../assets/caras/seleccion/Gomez.jpg'
 import Lautaro from '../assets/caras/seleccion/Lautaro.jpg'
+import LoCelso from '../assets/caras/seleccion/LoCelso.jpg'
 import Emiliano from '../assets/caras/seleccion/Martinez.jpg'
+import Messi from '../assets/caras/seleccion/Messi.jpg'
+import Montiel from '../assets/caras/seleccion/Montiel.jpg'
 import Ocampos from '../assets/caras/seleccion/Ocampos.jpg'
+import Otamendi from '../assets/caras/seleccion/Otamendi.jpg'
 import Palacios from '../assets/caras/seleccion/Palacios.jpg'
+import Paredes from '../assets/caras/seleccion/Paredes.jpg'
+import Pereyra from '../assets/caras/seleccion/Pereyra.jpg'
+import Pezzella from '../assets/caras/seleccion/Pezzella.jpg'
 import Quarta from '../assets/caras/seleccion/Quarta.jpg'
+import Rodriguez from '../assets/caras/seleccion/Rodriguez.jpg'
+import Saravia from '../assets/caras/seleccion/Saravia.jpg'
+import Tagliafico from '../assets/caras/seleccion/Tagliafico.jpg'
 
 import Alvarez from '../assets/caras/river/Alvarez.jpg';
 import Angileri from '../assets/caras/river/Angileri.jpg';
@@ -28,16 +45,26 @@ import Suarez from '../assets/caras/river/Suarez.jpg';
 import Vigo from '../assets/caras/river/Vigo.jpg';
 import Zuculini from '../assets/caras/river/Zuculini.jpg';
 
-
+import Buffarini from '../assets/caras/boca/Buffarini.jpg';
+import Campuzano from '../assets/caras/boca/Campuzano.jpg';
+import Capaldo from '../assets/caras/boca/Capaldo.jpg';
 import Cardona from '../assets/caras/boca/Cardona.jpg';
+import Fabra from '../assets/caras/boca/Fabra.jpg';
 import Izquierdoz from '../assets/caras/boca/Izquierdoz.jpg';
+import Lopez from '../assets/caras/boca/Lopez.jpg';
 import Maroni from '../assets/caras/boca/Maroni.jpg';
+import Mas from '../assets/caras/boca/Mas.jpg';
 import Medina from '../assets/caras/boca/Medina.jpg';
+import Obando from '../assets/caras/boca/Obando.jpg';
 import Rojo from '../assets/caras/boca/Rojo.jpg';
 import Rossi from '../assets/caras/boca/Rossi.jpg';
+import Salvio from '../assets/caras/boca/Salvio.jpg';
 import Soldano from '../assets/caras/boca/Soldano.jpg';
+import Tevez from '../assets/caras/boca/Tevez.jpg';
 import Varela from '../assets/caras/boca/Varela.jpg';
+import Villa from '../assets/caras/boca/Villa.jpg';
 import Zambrano from '../assets/caras/boca/Zambrano.jpg';
+import Zarate from '../assets/caras/boca/Zarate.jpg';
 import Zeballos from '../assets/caras/boca/Zeballos.jpg';
 
 // JUGADORES
@@ -45,13 +72,13 @@ import Zeballos from '../assets/caras/boca/Zeballos.jpg';
 export const jugadoresSeleccion = [
     {
         nombre: 'Armani',
-        imagen: 'https://images.ole.com.ar/collections/avatares/149575.jpg',
+        imagen: Armani,
         id: 1,
         seleccionado: false 
     },
     {
         nombre: 'Andrada',
-        imagen: 'https://images.ole.com.ar/collections/avatares/86266.jpg',
+        imagen: Andrada,
         id: 2,
         seleccionado: false 
     },
@@ -63,19 +90,19 @@ export const jugadoresSeleccion = [
     },
     {
         nombre: 'Otamendi',
-        imagen: 'https://images.ole.com.ar/collections/avatares/57410.jpg',
+        imagen: Otamendi,
         id: 4,
         seleccionado: false 
     },
     {
         nombre: 'Montiel',
-        imagen: 'https://images.ole.com.ar/collections/avatares/218430.jpg',
+        imagen: Montiel,
         id: 5,
         seleccionado: false 
     },
     {
         nombre: 'Pezzella',
-        imagen: 'https://images.ole.com.ar/collections/avatares/121220.jpg',
+        imagen: Pezzella,
         id: 6,
         seleccionado: false 
     },
@@ -87,31 +114,31 @@ export const jugadoresSeleccion = [
     },
     {
         nombre: 'Tagliafico',
-        imagen: 'https://images.ole.com.ar/collections/avatares/86479.jpg',
+        imagen: Tagliafico,
         id: 8,
         seleccionado: false 
     },
     {
         nombre: 'Foyth',
-        imagen: 'https://images.ole.com.ar/collections/avatares/234908.jpg',
+        imagen: Foyth,
         id: 9,
         seleccionado: false 
     },
     {
         nombre: 'Saravia',
-        imagen: 'https://images.ole.com.ar/collections/avatares/153394.jpg',
+        imagen: Saravia,
         id: 10,
         seleccionado: false 
     },
     {
         nombre: 'Paredes',
-        imagen: 'https://images.ole.com.ar/collections/avatares/91080.jpg',
+        imagen: Paredes,
         id: 11,
         seleccionado: false 
     },
     {
         nombre: 'Rodriguez',
-        imagen: 'https://images.ole.com.ar/collections/avatares/197024.jpg',
+        imagen: Rodriguez,
         id: 12,
         seleccionado: false 
     },
@@ -129,19 +156,19 @@ export const jugadoresSeleccion = [
     },
     {
         nombre: 'Pereyra',
-        imagen: 'https://images.ole.com.ar/collections/avatares/61566.jpg',
+        imagen: Pereyra,
         id: 15,
         seleccionado: false 
     },
     {
         nombre: 'De Paul',
-        imagen: 'https://images.ole.com.ar/collections/avatares/119141.jpg',
+        imagen: DePaul,
         id: 16,
         seleccionado: false 
     },
     {
         nombre: 'Lo Celso',
-        imagen: 'https://images.ole.com.ar/collections/avatares/200826.jpg',
+        imagen: LoCelso,
         id: 17,
         seleccionado: false 
     },
@@ -159,19 +186,19 @@ export const jugadoresSeleccion = [
     },
     {
         nombre: 'Di Maria',
-        imagen: 'https://images.ole.com.ar/collections/avatares/46497.jpg',
+        imagen: DiMaria,
         id: 20,
         seleccionado: false 
     },
     {
         nombre: 'Messi',
-        imagen: 'https://images.ole.com.ar/collections/avatares/19054.jpg',
+        imagen: Messi,
         id: 21,
         seleccionado: false 
     },
     {
         nombre: 'Agüero',
-        imagen: 'https://images.ole.com.ar/collections/avatares/37572.jpg',
+        imagen: Aguero,
         id: 22,
         seleccionado: false 
     },
@@ -183,7 +210,7 @@ export const jugadoresSeleccion = [
     },
     {
         nombre: 'Dybala',
-        imagen: 'https://images.ole.com.ar/collections/avatares/120638.jpg',
+        imagen: Dybala,
         id: 24,
         seleccionado: false 
     },
@@ -198,7 +225,7 @@ export const jugadoresSeleccion = [
 export const jugadoresRiver = [
     {
         nombre: 'Armani',
-        imagen: 'https://images.ole.com.ar/collections/avatares/149575.jpg',
+        imagen: Armani,
         id: 1,
         seleccionado: false 
     },
@@ -252,7 +279,7 @@ export const jugadoresRiver = [
     },
     {
         nombre: 'Montiel',
-        imagen: 'https://images.ole.com.ar/collections/avatares/218430.jpg',
+        imagen: Montiel,
         id: 10,
         seleccionado: false 
     },
@@ -327,7 +354,7 @@ export const jugadoresRiver = [
 export const jugadoresBoca = [
     {
         nombre: 'Andrada',
-        imagen: 'https://images.ole.com.ar/collections/avatares/86266.jpg',
+        imagen: Andrada,
         id: 1,
         seleccionado: false 
     },
@@ -339,7 +366,7 @@ export const jugadoresBoca = [
     },
     {
         nombre: 'Lopez',
-        imagen: 'https://images.ole.com.ar/collections/avatares/76734.jpg',
+        imagen: Lopez,
         id: 3,
         seleccionado: false 
     },
@@ -363,37 +390,37 @@ export const jugadoresBoca = [
     },
     {
         nombre: 'Mas',
-        imagen: 'https://images.ole.com.ar/collections/avatares/76734.jpg',
+        imagen: Mas,
         id: 7,
         seleccionado: false 
     },
     {
         nombre: 'Buffarini',
-        imagen: 'https://images.ole.com.ar/collections/avatares/113808.jpg',
+        imagen: Buffarini,
         id: 8,
         seleccionado: false 
     },
     {
         nombre: 'Capaldo',
-        imagen: 'https://images.ole.com.ar/collections/avatares/474094.jpg',
+        imagen: Capaldo,
         id: 9,
         seleccionado: false 
     },
     {
         nombre: 'Fabra',
-        imagen: 'https://images.ole.com.ar/collections/avatares/150427.jpg',
+        imagen: Fabra,
         id: 10,
         seleccionado: false 
     },
     {
         nombre: 'Campuzano',
-        imagen: 'https://images.ole.com.ar/collections/avatares/444359.jpg',
+        imagen: Campuzano,
         id: 11,
         seleccionado: false 
     },
     {
         nombre: 'Obando',
-        imagen: 'https://images.ole.com.ar/collections/avatares/442769.jpg',
+        imagen: Obando,
         id: 12,
         seleccionado: false 
     },
@@ -429,25 +456,25 @@ export const jugadoresBoca = [
     },
     {
         nombre: 'Tevez',
-        imagen: 'https://images.ole.com.ar/collections/avatares/20312.jpg',
+        imagen: Tevez,
         id: 19,
         seleccionado: false 
     },
     {
         nombre: 'Salvio',
-        imagen: 'https://images.ole.com.ar/collections/avatares/56492.jpg',
+        imagen: Salvio,
         id: 20,
         seleccionado: false 
     },
     {
         nombre: 'Zarate',
-        imagen: 'https://images.ole.com.ar/collections/avatares/49696.jpg',
+        imagen: Zarate,
         id: 21,
         seleccionado: false 
     },
     {
         nombre: 'Villa',
-        imagen: 'https://images.ole.com.ar/collections/avatares/226896.jpg',
+        imagen: Villa,
         id: 22,
         seleccionado: false 
     },

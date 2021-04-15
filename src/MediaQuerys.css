@@ -167,6 +167,7 @@
     .img-titular{
         width: 3em;
         height: 3em;
+        margin-right: 0;
     }
 }
 @media all and (max-width: 430px){
