@@ -1,7 +1,25 @@
 @media all and (max-width: 600px){
     .background{
-        min-height: 200vh;
+        min-height: 220vh;
         padding-bottom: 0;
+    }
+}
+
+@media all and (max-width: 520px){
+    .background{
+        min-height: 240vh;
+    }
+}
+
+@media all and (max-width: 500px){
+    .background{
+        min-height: 230vh;
+    }
+}
+
+@media all and (max-width: 430px){
+    .background{
+        min-height: 220vh;
     }
 }
 
@@ -134,7 +152,13 @@
         font-size: 0.875rem;
         transform: rotate(-90deg);
     }
+    .btn-descarga{
+        width: 5em;
+        height: 5em;
+        transform: translateY(10em);
+    }
 }
+
 @media all and (max-width: 500px){
     .img-cancha{
         width: 33em;
@@ -148,6 +172,9 @@
 @media all and (max-width: 430px){
     .img-cancha{
         transform: rotate(90deg) translateX(5em)
+    }
+    .btn-descarga{
+        transform: translateY(8em);
     }
 }
 @media all and (max-width: 400px){

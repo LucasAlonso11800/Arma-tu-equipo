@@ -3,6 +3,7 @@ import signo from '../assets/Signo.png';
 import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis, formacionSiete, formacionOcho } from './Formaciones';
 
 import { GlobalContext } from '../context/GlobalState';
+import html2canvas from 'html2canvas';
 
 function Cancha() {
     const { jugadores, titulares, setTitulares } = useContext(GlobalContext);
@@ -19,7 +20,7 @@ function Cancha() {
             }
         }
         else if (index < titulares.length - 1) {
-            if(indexJugadores !== -1){
+            if (indexJugadores !== -1) {
                 jugadores[indexJugadores].seleccionado = false;
                 const nuevosTitulares = titulares.filter(j => j.id !== jugador.id);
                 nuevosTitulares.splice(index, 0, {
@@ -31,6 +32,17 @@ function Cancha() {
             }
         }
     };
+
+    function guardar(canvas) {
+        let a = document.createElement('a');
+        a.href = canvas.toDataURL();
+        a.download = 'TuEquipo.png';
+        a.click()
+    };
+
+    function divAImagen(div) {
+        html2canvas(div, {scrollY: -window.scrollY}).then(canvas => guardar(canvas))
+    }
 
     return (
         <div className="cancha">
@@ -47,7 +59,7 @@ function Cancha() {
                     <li className='formacion' onClick={() => setFormacion(formacionOcho)}>5-4-1</li>
                 </ul>
             </div>
-            <div className="img-cancha">
+            <div className="img-cancha" id="cancha">
                 <div className="titular" style={{ top: '46%', left: '5%' }}>
                     <img
                         onClick={titulares[0] ? () => quitarTitular(titulares[0]) : () => { }}
@@ -138,6 +150,9 @@ function Cancha() {
                     <p className="nombre-titular">{titulares[10] ? titulares[10].nombre : 'Jugador 11'}</p>
                 </div>
             </div>
+            <button className="btn-descarga" onClick={() => divAImagen(document.querySelector('#cancha'))}>
+                    Descargar
+            </button>
         </div>
     )
 
