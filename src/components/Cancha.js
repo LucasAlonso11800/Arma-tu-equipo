@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 
 function Cancha() {
     const [formacion, setFormacion] = useState(formacionUno);
+    const arrayParaMapear = new Array(11).fill(0);
 
     function guardar(canvas) {
         let a = document.createElement('a');
@@ -33,17 +34,9 @@ function Cancha() {
                 </ul>
             </div>
             <div className="img-cancha" id="cancha">
-                <Titular index={0} formacion={formacion}/>
-                <Titular index={1} formacion={formacion}/>
-                <Titular index={2} formacion={formacion}/>
-                <Titular index={3} formacion={formacion}/>
-                <Titular index={4} formacion={formacion}/>
-                <Titular index={5} formacion={formacion}/>
-                <Titular index={6} formacion={formacion}/>
-                <Titular index={7} formacion={formacion}/>
-                <Titular index={8} formacion={formacion}/>
-                <Titular index={9} formacion={formacion}/>
-                <Titular index={10} formacion={formacion}/>
+                {arrayParaMapear.map((item, index) => {
+                    return <Titular index={index} formacion={formacion} key={index}/>
+                })}
             </div>
             <button className="btn-descarga" onClick={() => divAImagen(document.querySelector('#cancha'))}>
                     Descargar
