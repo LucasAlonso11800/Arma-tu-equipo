@@ -9,10 +9,11 @@ function Navbar() {
     function cambiarEquipo(equipo) {
         setJugadores(equipo);
         setTitulares([]);
-        todosLosJugadores.forEach(jugador => jugador.seleccionado = false)
-        if(equipo === jugadoresSeleccion) return setEquipo('la seleccion');
-        if(equipo === jugadoresRiver) return setEquipo('River');
-        if(equipo === jugadoresBoca) return setEquipo('Boca');
+        todosLosJugadores.forEach(jugador => jugador.seleccionado = false);
+        
+        if(equipo === jugadoresSeleccion) setEquipo('la seleccion');
+        if(equipo === jugadoresRiver) setEquipo('River');
+        if(equipo === jugadoresBoca) setEquipo('Boca');
     };
 
     return (

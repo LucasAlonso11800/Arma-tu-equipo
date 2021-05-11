@@ -6,42 +6,33 @@ function Jugador({ jugador }) {
     const rellenos = titulares.filter(jugador => jugador.id === '');
 
     function agregarTitular(jugador) {
-        if(titulares.length === 0){
-            jugador.seleccionado = true
-            setTitulares([jugador])
-        }
-        else if(titulares.length > 0 && titulares.length < 11){
-            jugador.seleccionado = true
-            if(rellenos.length > 0){
-                const index = titulares.indexOf(rellenos[0]);
-                const nuevosTitulares = titulares;
-                nuevosTitulares.splice(index, 1, jugador);
-                setTitulares([...nuevosTitulares]);
-                rellenos.shift();
-            }
-            else {
-                setTitulares([...titulares, jugador])
-            }
-        }
-        else if(titulares.length === 11){
-            jugador.seleccionado = true
-            if(rellenos.length > 0){
-                const index = titulares.indexOf(rellenos[0]);
-                const nuevosTitulares = titulares;
-                nuevosTitulares.splice(index, 1, jugador);
-                setTitulares([...nuevosTitulares]);
-                rellenos.shift();
-            }
-        }
+        const losTitularesEstanCompletos = titulares.length === 11;
+        const hayRellenos = rellenos.length > 0;
+        
+        if(losTitularesEstanCompletos && !hayRellenos) return;
+
+        jugador.seleccionado = true;
+        
+        if (titulares.length === 0) setTitulares([jugador]);
+
+        if(!losTitularesEstanCompletos && !hayRellenos) setTitulares([...titulares, jugador]);
+
+        if (hayRellenos) {
+            const index = titulares.indexOf(rellenos[0]);
+            const nuevosTitulares = titulares.valueOf();
+            nuevosTitulares.splice(index, 1, jugador);
+            setTitulares([...nuevosTitulares]);
+            rellenos.shift();
+        };
     };
 
     return (
         <div className={
-            jugador.seleccionado && equipo === 'la seleccion' ? 'seleccionado seleccionado-seleccion' : 
-            jugador.seleccionado && equipo === 'River' ? 'seleccionado seleccionado-river' :
-            jugador.seleccionado && equipo === 'Boca' ? 'seleccionado seleccionado-boca' :
-            'jugador'}
-            onClick={jugador.seleccionado ? () => {} : () => agregarTitular(jugador) }
+            jugador.seleccionado && equipo === 'la seleccion' ? 'seleccionado seleccionado-seleccion' :
+                jugador.seleccionado && equipo === 'River' ? 'seleccionado seleccionado-river' :
+                    jugador.seleccionado && equipo === 'Boca' ? 'seleccionado seleccionado-boca' :
+                        'jugador'}
+            onClick={jugador.seleccionado ? () => { } : () => agregarTitular(jugador)}
         >
             <img src={jugador.imagen}
                 className="img-jugador"
