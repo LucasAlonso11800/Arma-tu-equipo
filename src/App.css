@@ -11,8 +11,6 @@
 body{
     overflow-x: hidden;
     min-width: 300px;
-}
-.background{
     background-image: url(./assets/Pasto.jpg);
     background-size: cover;
     background-attachment: fixed;
