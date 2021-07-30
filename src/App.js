@@ -3,19 +3,21 @@ import './MediaQuerys.css'
 
 import Navbar from './components/Navbar';
 import Titulo from './components/Titulo';
-import ArmarEquipo from './components/ArmarEquipo';
+import ListaDeJugadores from './components/ListaDeJugadores';
+import Cancha from './components/Cancha';
 
 import { GlobalProvider } from './context/GlobalState';
 
 function App() {
     return (
-        <div className="background">
-            <GlobalProvider>
-                <Navbar />
+        <GlobalProvider>
+            <Navbar />
+            <main className="container">
                 <Titulo />
-                <ArmarEquipo />
-            </GlobalProvider>
-        </div>
+                <ListaDeJugadores />
+                <Cancha />
+            </main>
+        </GlobalProvider>
     )
 };
 

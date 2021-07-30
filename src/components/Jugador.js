@@ -1,36 +1,22 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { AGREGAR_TITULAR } from '../consts/ActionTypes';
 
 function Jugador({ jugador }) {
-    const { titulares, setTitulares, equipo } = useContext(GlobalContext);
-    const rellenos = titulares.filter(jugador => jugador.id === '');
+    const { state, dispatch } = useContext(GlobalContext);
 
-    function agregarTitular(jugador) {
-        const losTitularesEstanCompletos = titulares.length === 11;
-        const hayRellenos = rellenos.length > 0;
-        
-        if(losTitularesEstanCompletos && !hayRellenos) return;
-
-        jugador.seleccionado = true;
-        
-        if (titulares.length === 0) setTitulares([jugador]);
-
-        if(!losTitularesEstanCompletos && !hayRellenos) setTitulares([...titulares, jugador]);
-
-        if (hayRellenos) {
-            const index = titulares.indexOf(rellenos[0]);
-            const nuevosTitulares = titulares.valueOf();
-            nuevosTitulares.splice(index, 1, jugador);
-            setTitulares([...nuevosTitulares]);
-            rellenos.shift();
-        };
+    const agregarTitular = (jugador) => {
+        return dispatch({
+            type: AGREGAR_TITULAR,
+            payload: { jugador }
+        })
     };
 
     return (
         <div className={
-            jugador.seleccionado && equipo === 'la seleccion' ? 'seleccionado seleccionado-seleccion' :
-                jugador.seleccionado && equipo === 'River' ? 'seleccionado seleccionado-river' :
-                    jugador.seleccionado && equipo === 'Boca' ? 'seleccionado seleccionado-boca' :
+            jugador.seleccionado && state.equipo === 'la seleccion' ? 'seleccionado seleccionado-seleccion' :
+                jugador.seleccionado && state.equipo === 'River' ? 'seleccionado seleccionado-river' :
+                    jugador.seleccionado && state.equipo === 'Boca' ? 'seleccionado seleccionado-boca' :
                         'jugador'}
             onClick={jugador.seleccionado ? () => { } : () => agregarTitular(jugador)}
         >

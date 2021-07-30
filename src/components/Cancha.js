@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis, formacionSiete, formacionOcho } from './Formaciones';
+import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCinco, formacionSeis, formacionSiete, formacionOcho } from '../consts/Formaciones';
 import Titular from './Titular';
 import html2canvas from 'html2canvas';
 
