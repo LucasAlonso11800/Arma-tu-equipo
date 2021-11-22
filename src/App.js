@@ -8,7 +8,7 @@ import Cancha from './components/Cancha';
 
 import { GlobalProvider } from './context/GlobalState';
 
-function App() {
+export default function App() {
     return (
         <GlobalProvider>
             <Navbar />
@@ -20,5 +20,3 @@ function App() {
         </GlobalProvider>
     )
 };
-
-export default App;

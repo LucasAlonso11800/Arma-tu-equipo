@@ -3,20 +3,20 @@ import { formacionUno, formacionDos, formacionTres, formacionCuatro, formacionCi
 import Titular from './Titular';
 import html2canvas from 'html2canvas';
 
-function Cancha() {
+export default function Cancha() {
     const [formacion, setFormacion] = useState(formacionUno);
     const arrayParaMapear = new Array(11).fill(0);
 
-    function guardar(canvas) {
-        let a = document.createElement('a');
+    const guardar = (canvas) => {
+        const a = document.createElement('a');
         a.href = canvas.toDataURL();
         a.download = 'TuEquipo.png';
         a.click()
     };
 
-    function divAImagen(div) {
-        html2canvas(div, {scrollY: -window.scrollY}).then(canvas => guardar(canvas))
-    }
+    const divAImagen = (div) => {
+        html2canvas(div, { scrollY: -window.scrollY }).then(canvas => guardar(canvas))
+    };
 
     return (
         <div className="cancha">
@@ -34,16 +34,11 @@ function Cancha() {
                 </ul>
             </div>
             <div className="img-cancha" id="cancha">
-                {arrayParaMapear.map((item, index) => {
-                    return <Titular index={index} formacion={formacion} key={index}/>
-                })}
+                {arrayParaMapear.map((_, index) => <Titular index={index} formacion={formacion} key={index} />)}
             </div>
             <button className="btn-descarga" onClick={() => divAImagen(document.querySelector('#cancha'))}>
-                    Descargar
+                Descargar
             </button>
         </div>
     )
-
 };
-
-export default Cancha;
