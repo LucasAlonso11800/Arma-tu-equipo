@@ -175,4 +175,5 @@ body{
     border: none;
     border-radius: 100%;
     font-size: 1.375rem;
+    cursor: pointer;
 }

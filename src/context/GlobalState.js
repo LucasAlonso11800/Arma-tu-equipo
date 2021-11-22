@@ -12,7 +12,7 @@ export const GlobalContext = createContext();
 const initialState = {
     jugadores: jugadoresSeleccion,
     titulares: [],
-    equipo: 'la seleccion',
+    equipo: 'la selección',
     rellenos: []
 };
 
@@ -27,6 +27,7 @@ function reducer(state, action) {
 
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
+    
     return <GlobalContext.Provider value={{ state, dispatch }}>
         {children}
     </GlobalContext.Provider>

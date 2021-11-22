@@ -15,12 +15,11 @@ export const agregarTitular = (state, payload) => {
         const index = titulares.indexOf(rellenos[0]);
         const nuevosTitulares = titulares.valueOf();
         nuevosTitulares[index] = jugador;
-        const nuevosRellenos = rellenos.slice(1);
-
+        
         return {
             ...state,
             titulares: nuevosTitulares,
-            rellenos: nuevosRellenos
+            rellenos: rellenos.slice(1)
         }
     };
 };
